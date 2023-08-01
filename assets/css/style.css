@@ -1,0 +1,1660 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --yellow: rgb(255, 230, 0);
+    --yd: #FFC300;
+}
+
+/*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width:992px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+#message {
+    transition: all 1s;
+    position: fixed;
+    font-size: 2rem;
+    top: 7.5rem;
+    right: 13%;
+    left: 13%;
+    z-index: 1030;
+}
+
+
+#message .alert-danger {
+    background: #e2284dc2;
+    color: white
+}
+
+#Loginmessage {
+    transition: all 1s;
+    position: fixed;
+    font-size: 1.6rem;
+    top: 5.5rem;
+    right: 13%;
+    left: 13%;
+    z-index: 1030;
+}
+
+#Loginmessage .alert-danger {
+    background: #e2284dc2;
+    color: white
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: white;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+  # Home Section
+  --------------------------------------------------------------*/
+.services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/834897/pexels-photo-834897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.services .info {
+    width: 100%;
+    padding: 0rem 9rem;
+    margin: 0rem auto;
+}
+
+.services .info h1 {
+    font-family: "raleway", sans-serif;
+    font-size: 6rem;
+    font-weight: 1000;
+    color: white;
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.services .info h3 {
+    font-family: "raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.services .home-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.services .home-btn button {
+    padding: .8rem 3.2rem;
+    font-size: 1.6rem;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    outline: none;
+}
+
+.services .home-btn button#signup {
+    margin-left: 2rem;
+}
+
+/*--------------------------------------------------------------
+# Login / Signup form
+--------------------------------------------------------------*/
+.loginbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9000;
+    padding-top: 2rem;
+    font-family: "raleway", sans-serif;
+    transform: translateX(110%);
+}
+
+.login-box {
+    min-width: 52.5rem;
+    height: 67rem;
+    position: relative;
+    box-shadow: 0 1.2rem 1.5rem 0 rgba(0, 0, 0, .24), 0 1.7rem 5rem 0 rgba(0, 0, 0, .19);
+    overflow: hidden;
+}
+
+.login-box .closelogin {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.login-box .login-alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+.login-alert div {
+    width: auto;
+    height: auto;
+    color: #FFC300;
+    transform: translateY(-5rem);
+    pointer-events: none;
+}
+
+.field-icon {
+    float: right;
+    width: 5.6rem;
+    height: 5.6rem;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5.5rem;
+    margin-right: -0.1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-snip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 9rem 7rem 5rem 7rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: gray;
+    font-weight: 800;
+}
+
+.login-snip .login,
+.login-snip .sign-up-form {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear
+}
+
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check {
+    display: none
+}
+
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button {
+    text-transform: uppercase
+}
+
+.login-snip .tab {
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    padding-bottom: .5rem;
+    margin: 0 1.5rem 1rem 0;
+    display: inline-block;
+    border-bottom: .2rem solid transparent
+}
+
+.login-snip .sign-in:checked+.tab,
+.login-snip .sign-up:checked+.tab {
+    color: #fff;
+    border-color: #FFC300;
+    border-width: 3px;
+}
+
+.login-space {
+    min-height: 3.45rem;
+    position: relative;
+    perspective: 100rem;
+    transform-style: preserve-3d;
+}
+
+.login-space .group {
+    margin: 2rem 0rem;
+}
+
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button {
+    font-size: 1.6rem;
+    width: 100%;
+    color: #fff;
+    display: block;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.login-box .buttonc {
+    background: #FFC300;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    padding: .9rem;
+    border-radius: 5px;
+    width: 10rem;
+    margin: 0rem 0rem 0rem 1.8rem;
+    display: inline;
+}
+
+.login-box .buttonc:hover {
+    transition: all .3s linear;
+    background: #127681;
+}
+
+.login-box .inputc {
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem;
+    color: #fff;
+    display: inline;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(255, 255, 255, .1);
+    margin: 0rem 1rem;
+    font-size: 2rem;
+}
+
+.login-space .group .input,
+.login-space .group .button {
+    border: none;
+    padding: 1.5rem 2rem;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, .1)
+}
+
+.login-space .group input[data-type="password"] {
+
+    -webkit-text-security: circle
+}
+
+.login-space .group .label {
+    color: rgb(252, 247, 247);
+    font-size: 1.2rem
+}
+
+.login-space .group .button {
+    background: #FFC300;
+    transition: all .3s linear;
+    margin-top: 5rem;
+}
+
+.login-space .group .button:hover {
+    background: #127681;
+}
+
+.login-space .group label .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: white;
+}
+
+.login-space .group label .icon:before,
+.login-space .group label .icon:after {
+    content: '';
+    width: 1rem;
+    height: .2rem;
+    background: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out 0s
+}
+
+.login-space .group label .icon:before {
+    left: .3rem;
+    width: .5rem;
+    bottom: .6rem;
+    transform: scale(0) rotate(0);
+}
+
+.login-space .group label .icon:after {
+    top: .6rem;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.login-space .group .check:checked+label {
+    color: #fff;
+}
+
+.login-space .group .check:checked+label .icon {
+    background: #FFC300;
+}
+
+.login-space .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg);
+}
+
+.login-space .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.login-snip .sign-in:checked+.tab+.sign-up+.tab+.login-space .login {
+    transform: rotate(0);
+}
+
+.login-snip .sign-up:checked+.tab+.login-space .sign-up-form {
+    transform: rotate(0);
+    color: rgb(255, 253, 253);
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.hr {
+    height: .2rem;
+    margin: 7rem 0 5rem 0;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.sign-up-form .hr {
+    margin: 0rem 0 5rem 0;
+}
+
+.foot {
+    text-align: center;
+    margin-top: -1rem;
+}
+
+::placeholder {
+    color: #b3b3b3
+}
+
+.loginbg .login-box a {
+    font-size: 1.6rem;
+}
+
+.loginbg .login-box a:hover {
+    transition: all .3s ease-out;
+    color: #FFC300;
+    text-shadow: .1rem .1rem .4rem rgba(0, 0, 0, 0.5);
+}
+
+.login-box label[for="check"] {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+/*--------------------------------------------------------------
+# Back to Top
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 8888;
+    animation: backtotop 1s ease infinite alternate;
+    -webkit-animation: backtotop 1s ease infinite alternate;
+}
+
+@-webkit-keyframes backtotop {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes backtotop {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.back-to-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    background: var(--pink);
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+    background: var(--night);
+}
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+#header {
+    border-bottom: 1px solid gray;
+    background-color: #fbb034;
+    background-image: linear-gradient(-10deg, #fae667 30%, #ffdd02 50%);
+}
+
+#header .logo {
+    font-family: "raleway", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-left: -2rem;
+    padding: 0;
+    color: #000;
+    /* text-shadow: .2rem .2rem .1rem gray; */
+}
+
+#header .logo a {
+    color: #000;
+}
+
+#header .logo a .icon-log {
+    font-size: 4rem !important;
+    text-shadow: .2rem .2rem 0rem gray;
+    margin-right: -2rem;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu>ul>li {
+    position: relative;
+    margin: 0rem 1rem;
+    white-space: nowrap;
+}
+
+.nav-menu a {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    padding: 2.1rem .3rem;
+    font-weight: 800;
+    font-family: "Raleway", sans-serif;
+    color: #000;
+}
+
+.nav-menu>ul>li>a:before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    bottom: 6px;
+    left: 50%;
+    background-color: rgba(29, 28, 28, 0.527);
+    width: 0rem;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover>a:before,
+.nav-menu .active>a:before {
+    left: 0;
+    width: 100%;
+}
+
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
+    color: #000;
+}
+
+.nav-menu .theatres>a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 5px;
+}
+
+.togglemode {
+    background: none;
+    font-size: 2.5rem;
+    margin: 0;
+    transition: all 0.5s linear;
+}
+
+.togglemode:hover {
+    transform: rotate(360deg);
+    color: #dd0e61;
+}
+
+/*--------------------------------------------------------------
+# Search Bar
+--------------------------------------------------------------*/
+.searchbar {
+    position: relative;
+    background-color: #dd0e61;
+    height: 4rem;
+    width: fit-content;
+    padding: 0;
+    margin-left: 2rem;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.searchbar:hover>.searchbtn,
+.searchbar:hover .searchtext,
+.searchbar:hover {
+    background: #127681;
+}
+
+.searchbtn {
+    outline: none;
+    color: white;
+    float: right;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 1.6rem;
+}
+
+.searchbtn:focus {
+    outline: none;
+}
+
+.searchtext {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 1.4rem;
+    transition: 0.4s;
+    line-height: 4rem;
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: 20rem;
+    padding-left: 1rem;
+}
+
+.searchtext::placeholder {
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.searchbar .search-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    color: #000;
+}
+
+.searchbar .search-list li {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: none;
+}
+
+.searchbar.active .search-list li {
+    display: none;
+}
+
+.searchbar .search-list li:hover {
+    background-color: #dd0e61;
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# nav profile
+--------------------------------------------------------------*/
+.nav-profile {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 1rem;
+}
+
+.nav-profile>button {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: .9rem 2rem;
+    background: #dd0e61;
+    transition: all 0.4s linear;
+    margin: 0;
+    margin-right: 2rem;
+}
+
+.nav-profile>button:hover {
+    background: var(--night);
+}
+
+.nav-profile .profile {
+    width: 4.6rem;
+    height: 4.6rem;
+    background: url(../img/boss.svg) #dd0e61;
+    background-size: cover;
+    border-radius: 50%;
+    border: .2rem solid #dd0e61;
+    transition: all 0.3s linear;
+}
+
+.nav-profile .profile:hover {
+    background-color: var(--night);
+    border-color: var(--night);
+}
+
+.nav-profile .profilename {
+    margin-top: .4rem;
+}
+
+.nav-profile .profilename span {
+    width: 8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: black;
+    letter-spacing: .5px;
+    padding: .2rem .8rem;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+#header.dark .nav-profile .profilename span,
+#header.dark .nav-profile .profilename p {
+    color: white;
+}
+
+.nav-profile .profilename p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    letter-spacing: .5px;
+    padding: .2rem .8rem;
+}
+
+.nav-profile .userprofile {
+    position: absolute;
+    display: block;
+    top: calc(100% + 3rem);
+    right: 0;
+    width: 25rem !important;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s linear;
+}
+
+.nav-profile:hover .userprofile {
+    visibility: visible;
+    opacity: 1;
+    top: calc(100% + 1rem);
+}
+
+.nav-profile .userprofile ul {
+    list-style: none;
+    padding: .5rem 1rem;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border: .2rem solid gray;
+}
+
+.nav-profile .userprofile ul li {
+    margin: 1rem 0rem;
+    width: 100%;
+}
+
+.nav-profile .userprofile ul img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: gray;
+    border: .4rem solid gray;
+}
+
+.nav-profile .userprofile ul h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: black;
+    letter-spacing: .5px;
+}
+
+.nav-profile .userprofile ul span {
+    width: 100%;
+    border-radius: .5rem;
+    background-color: #dd0e61;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: block;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+.services2 {
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+    background: url(../img/bghome.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.services2 .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.services2 .add-note {
+    margin: 4rem auto;
+    display: grid;
+    width: 50rem;
+    height: fit-content;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: .2rem .2rem 1rem 0rem rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.services2 .add-note textarea.title {
+    font-size: 1.8rem;
+    outline: none;
+    border: none;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+    height: 4rem;
+    color: black;
+    border-radius: 1rem;
+    display: none;
+}
+
+.services2 .add-note textarea.desc {
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    padding: .5rem 2rem;
+    margin-top: .5rem;
+    height: 4rem;
+    color: black;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.services2 .add-note textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::-webkit-resizer {
+    visibility: hidden;
+}
+
+.services2 .add-note .btns {
+    margin: 3rem 1rem 1rem 1rem;
+    text-align: end;
+    display: none;
+}
+
+.services2 .btns button {
+    outline: none;
+    background: #FFC300;
+    color: #000;
+    border: none;
+    padding: .6rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.services2 .btns button:nth-child(1) {
+    margin-right: 2rem;
+}
+
+.services2 .add-note.active .btns,
+.services2 .add-note.active textarea.title {
+    display: block !important;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .section-title h2 {
+    font-family: 'raleway', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 2rem 0rem;
+    color: #fff;
+    position: relative;
+    width: fit-content;
+    padding: 1rem 4rem 1rem 0rem;
+}
+
+.portfolio .section-title h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #FFC300;
+    pointer-events: none;
+}
+
+.portfolio-container {
+    height: 45rem !important;
+    overflow-y: scroll;
+}
+
+.portfolio .portfolio-item {
+    margin-bottom: 3rem;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    color: #fff;
+    background: #e03a3c;
+}
+
+.portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    max-height: 40rem;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: white;
+    z-index: 1;
+    transition: 0.3s;
+    padding: 2rem 0rem;
+    /* word-break: break-all; */
+    border-radius: 1rem;
+}
+
+.portfolio .portfolio-wrap .note-title,
+.portfolio .portfolio-wrap .note-desc {
+    margin: 0rem 1rem;
+}
+
+.portfolio .portfolio-wrap .note-title {
+    font-family: 'raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.portfolio .portfolio-wrap .note-desc {
+    font-family: 'raleway', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: relative;
+    transition: all 0.3s linear;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 2rem 0rem 2rem;
+    visibility: hidden;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+
+.portfolio .portfolio-wrap .portfolio-info button {
+    background-color: transparent;
+    font-size: 1.5rem;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0rem 1rem;
+}
+
+.portfolio .portfolio-wrap .portfolio-info button:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.portfolio .portfolio-wrap .colors {
+    position: relative;
+    transition: all linear 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem 0rem 2rem;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.portfolio .portfolio-wrap:hover .active {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.colors span {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #127681;
+    margin: 0rem;
+}
+
+.note-window .colors span {
+    margin: 0rem 1rem;
+}
+
+.colors span:nth-child(1) {
+    background: #ccff90;
+}
+
+.colors span:nth-child(2) {
+    background: #d7aefb;
+}
+
+.colors span:nth-child(3) {
+    background: #a7ffeb;
+}
+
+.colors span:nth-child(4) {
+    background: #fdcfe8;
+}
+
+.colors span:nth-child(5) {
+    background: #fff475;
+}
+
+.colors span:nth-child(6) {
+    background: #aecbfa;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 5px 0 0;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #fff;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*--------------------------------------------------------------
+# Note Window
+--------------------------------------------------------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    transform: scale(0);
+    transition: all .3s ease;
+}
+
+.overlay.active {
+    visibility: visible;
+    transform: scale(1);
+    transition: all .3s ease .3s;
+}
+
+.note-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60rem;
+    height: 30rem;
+    z-index: 2002;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .3s ease .3s;
+}
+
+.note-window.active {
+   visibility: visible;
+   transform: translate(-50%, -50%) scale(1);
+   transition: all .3s ease;
+}
+
+.note-window textarea.note-title::-webkit-scrollbar {
+    display: none;
+}
+
+.note-window textarea.note-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    height: 4rem;
+    color: black;
+    background-color: rgba(255, 255, 0, 0.5);
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all .3s ease;
+}
+
+.note-window textarea.note-desc {
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    height: 21rem;
+    color: black;
+    display: block;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+
+.note-window .options {
+    padding: 2rem;
+    height: 4rem;
+    color: black;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.note-window .colors {
+    position: relative;
+    transition: all linear 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-window button {
+    font-family: 'raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: black;
+}
+
+.nothing {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nothing h1 {
+    width: fit-content;
+    font-family: 'raleway', sans-serif;
+    font-size: 3.6rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.nothing h2 {
+    width: fit-content;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: white;
+}
+
+.nothing h3 {
+    width: fit-content;
+    font-family: 'raleway', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.services3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/834897/pexels-photo-834897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+}
+
+.ccontainer {
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 1rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 82rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+    background-color: #dd0e61;
+    position: relative;
+}
+
+
+.contact-form:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: var(--pink);
+    transform: rotate(45deg);
+    top: 50px;
+    left: -13px;
+}
+
+#contact form {
+    padding: 2.3rem 2.2rem;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+
+.input-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+input::selection,
+textarea::selection {
+    background: var(--night);
+    color: white;
+}
+
+.input {
+    width: 90%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+textarea.input {
+    min-height: 150px;
+    border-radius: 22px;
+    resize: none;
+    overflow-y: auto;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 1.5rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+
+#contact .btn {
+    width: 90%;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    background-color: #fff;
+    color: var(--pink);
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    margin: 0;
+}
+
+#contact .btn:hover {
+    box-shadow: 0rem 0rem 1rem .1rem white, 0rem 0rem 1rem rgba(0, 0, 0, 0.5) inset;
+    background: linear-gradient(to right bottom, var(--pink) 30%, rgb(143, 38, 192), #d60edd);
+    color: #fff;
+}
+
+.contact-info {
+    padding: 2.3rem 2.2rem;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.contact-info .title {
+    color: var(--pink);
+}
+
+.text {
+    color: #333;
+    margin: 3rem 0 2rem 0;
+    font-weight: 700;
+}
+
+.info {
+    margin-top: 4rem;
+}
+
+.information {
+    display: flex;
+    color: #555;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 0.95rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cicon {
+    color: #dd0e61;
+    font-size: 2.4rem;
+    width: 28px;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-media {
+    padding: 2rem 0 0 0;
+}
+
+.social-media p {
+    color: black;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(-45deg, var(--pink), #d60edd);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+}
+
+.contact-info:before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 22px solid #1abc9c;
+    border-radius: 50%;
+    bottom: -77px;
+    right: 50px;
+    opacity: 0.3;
+}
+
+.big-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #dd0e61, #d60edd);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-20%, 40%);
+}
+
+.big-circle:after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-color: white;
+    border-radius: 50%;
+    top: calc(50% - 180px);
+    left: calc(50% - 180px);
+}
+
+.square {
+    position: absolute;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(181%, 11%);
+    opacity: 0.2;
+}
+
+@media (max-width: 850px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+    }
+
+    .contact-form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+
+    .square {
+        transform: translate(140%, 43%);
+        height: 350px;
+    }
+
+    .text {
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .social-media {
+        padding: 1.5rem 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .contact-info:before {
+        display: none;
+    }
+
+    .square,
+    .big-circle {
+        display: none;
+    }
+
+    form,
+    .contact-info {
+        padding: 1.7rem 1.6rem;
+    }
+
+    .text,
+    .information,
+    .social-media p {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 1.15rem;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .icon {
+        width: 23px;
+    }
+
+    .input {
+        padding: 0.45rem 1.2rem;
+    }
+
+    .btn {
+        padding: 0.45rem 1.2rem;
+    }
+}
+
+.input-container input:hover,
+.input-container textarea:hover {
+    box-shadow: 0 0 5px white;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+    box-shadow: 0rem 0rem .5rem .1rem white, 0rem 0rem 1rem rgba(0, 0, 0, 0.5) inset;
+}
