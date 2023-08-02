@@ -4,7 +4,7 @@
 
  Online Notes Maker Site is the online website in which user create his notes and do productive work. This website is for those people who want to utilize their time and work efficiently. Using this website user can make short but informative notes which is helpful for his learning journey. Most people make notes using traditional way pen and paper. But it is not very effective. Notes maker support 24 X 7 with all over the globe. User just need email and password of account. Due to password the notes get additional security. No buddy can read users notes without knowing his password. This site is very helpful in user’s educational journey especially for students.
 
--------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
 
  **The Project Aim At**
 
@@ -14,7 +14,7 @@ B. Used form controls with validation to collect user’s input.
 
 C. Performed CRUD operations Database.
 
--------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
 
 **Outputs**
 
